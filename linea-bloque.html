@@ -7,18 +7,35 @@
     <title>Elementos en línea vs en bloque</title>
     <meta charset="utf-8" />
     <style>
+      /* EJ 1 */
       h1,
       p {
         border: 1px solid black;
+        display: inline;
       }
 
       a,
       span {
         border: 1px solid red;
+        display: block;
+      }
+
+      /* EJ 2 */
+      textarea {
+        /*display: none;*/
+        visibility: hidden;
+      }
+
+      /* EJ 3 */
+      #listado > p {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: circle;
       }
     </style>
   </head>
   <body>
+    <!-- EJ 1 -->
     <h1>Lorem ipsum</h1>
     <p>Lorem ipsum dolor sit amet.</p>
     <p>
@@ -34,5 +51,41 @@
       voluptatum velit minus commodi, impedit at excepturi porro ipsam repellat
       ex.
     </p>
+
+    <!-- EJ 2 -->
+    <label>Nombre: <input type="text" name="nombre"></label>
+    <label>Apellidos: </label><input type="text" name="surname"></label>
+    <textarea name="texto"></textarea>
+    <label for="selector">Selector:</label>
+    <select name="select">
+      <option value="1">Uno</option>
+      <option value="2">Dos</option>
+      <option value="3">Tres</option>
+    </select>
+    <input type="submit" value="Enviar">
+
+    <!-- EJ 3 -->
+    <div id="listado">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
+        voluptatum velit minus commodi, impedit at excepturi porro ipsam repellat
+        ex.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
+        voluptatum velit minus commodi, impedit at excepturi porro ipsam repellat
+        ex.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
+        voluptatum velit minus commodi, impedit at excepturi porro ipsam repellat
+        ex.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
+        voluptatum velit minus commodi, impedit at excepturi porro ipsam repellat
+        ex.
+      </p>
+    </div>
   </body>
 </html>
